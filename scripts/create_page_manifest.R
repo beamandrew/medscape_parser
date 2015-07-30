@@ -38,3 +38,5 @@ for(i in 1:nrow(sections)) {
     }
   }
 }
+
+write.csv(medscape_links,file="../data/medscape_links.csv",row.names=FALSE)
