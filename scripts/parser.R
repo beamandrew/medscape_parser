@@ -34,7 +34,7 @@ for(i in 1:nrow(medscape_links)) {
       if(topic != "Overview") {
         topic_page <- html(paste0(baseurl,"/article/",topic_link,"#showall"))
         text <- topic_page %>% html_node("div.drugdbsectioncontent") %>% html_text()
-        text <- strip(topic_content)
+        text <- strip(text)
         link <- topic_link
         medscape_text <- rbind(medscape_text,cbind(section,name,link,topic,text))
       }
